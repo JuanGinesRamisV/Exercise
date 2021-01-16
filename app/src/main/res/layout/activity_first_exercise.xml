@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstExercise">
+
+    <TextView
+        android:id="@+id/textSomethingProfund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#840000"
+        android:textStyle="bold"
+        android:text="you were expection something profund?"/>
+
+    <Button
+        android:id="@+id/randomColor"
+        android:layout_below="@+id/textSomethingProfund"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonMethodRandomBackground"
+        android:text="Random color"/>
+
+    <ImageButton
+        android:id="@+id/moleculaImgButton"
+        android:layout_below="@+id/randomColor"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/molecula"
+        android:onClick="imageButtonMethod"/>
+
+    <ImageView
+        android:id="@+id/moleculaImg"
+        android:layout_below="@+id/moleculaImgButton"
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/molecula"/>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_marginTop="-20dp"
+        android:layout_below="@+id/moleculaImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hola"
+        android:background="@color/yellow"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_below="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hola"/>
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_below="@id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hola"
+        android:onClick="checkboxMethod"/>
+
+    <TextView
+        android:id="@+id/beautifulColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/checkbox1"
+        android:layout_below="@id/editText2"
+        android:text="pick a beautiful colour"
+        android:background="@color/blue"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/checkbox1">
+        <RadioButton
+            android:id="@+id/radioBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="blue"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/radioBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="red"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+        <RadioButton
+            android:id="@+id/radioBtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="green"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+    </RadioGroup>
+</RelativeLayout>

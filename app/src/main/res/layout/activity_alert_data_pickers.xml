@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlertDataPickers">
+
+    <TextView
+        android:id="@+id/alertTextTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Tap to test the alert:"/>
+
+    <Button
+        android:id="@+id/alertButtonTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/alertTextTest"
+        android:text="ALERT"
+        android:onClick="alertMethod"/>
+
+    <TextView
+        android:id="@+id/choseDatePickerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alertButtonTest"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Choose the date and time: "/>
+
+    <Button
+        android:id="@+id/DatePickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/alertButtonTest"
+        android:layout_below="@+id/choseDatePickerText"
+        android:layout_marginTop="5dp"
+        android:onClick="dateButtonMethod"
+        android:text="DATE"/>
+
+    <Button
+        android:id="@+id/timePickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choseDatePickerText"
+        android:layout_toEndOf="@+id/DatePickerButton"
+        android:layout_alignTop="@+id/DatePickerButton"
+        android:layout_marginStart="10dp"
+        android:onClick="timeButtonMethod"
+        android:text="TIME"/>
+</RelativeLayout>
